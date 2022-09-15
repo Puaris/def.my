@@ -1,0 +1,15 @@
+#b1{
+    position: relative;
+
+    background:#202020 url("/img/b1/fon.jpg")no-repeat center top/cover;
+    height:100vh;
+    padding:180px 0 260px;
+
+
+}
+#b1 .cont{
+    position: relative;
+    width:100%;
+    height: 250px;
+    border: #CE8800 1px solid;
+}

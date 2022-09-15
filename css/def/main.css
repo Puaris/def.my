@@ -1,0 +1,88 @@
+*{
+    outline: none;
+    transition: .4s;
+    font-family: "Montserrat", Helvetica,Arial, sans-serif;
+    box-sizing:border-box
+}
+html,body{
+    height: 100%;
+    text-align: justify;
+    cursor:default;
+    background-color:#fcfcfc;
+    position: relative
+}
+h1, h2, h3, h4{
+    text-align:center;
+    margin:15px auto;
+    font-weight:normal;
+}
+h1{font-size:180%}
+h2{font-size:130%}
+h3{font-size:120%}
+/*h1,h2,h3,h4{color:#b9cfff}*/
+p,ul{margin:5px;}
+p{line-height: 1.5;}
+ul li{list-style-type: none}
+
+/*A:link, .link {
+    color:#fcfcfc;
+    text-decoration:underline
+}
+
+A:active {
+    color:#4CA5C6
+}
+
+A:visited {
+    color:#fcfcfc
+}
+
+A:hover, .link:hover {
+    color:#4CA5C6;
+    text-decoration: blink
+}*/
+.maxw{
+    margin: 0 auto;
+    /*min-width: 150px;*/
+    /*max-width: 1240px;*/
+
+    position: relative;
+    /*width: 1180px;*/
+    max-width: 1280px;
+    border-left: burlywood 1px dotted;
+    border-right: burlywood 1px dotted;
+    overflow: hidden;
+
+}
+
+#back{
+    /*background-color: rgba(220, 220, 20, 0.9);
+    background-image: url("/img/sh1/fon1.jpg");*/
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index:0;
+    height:100%;
+    width:100%;
+}
+
+
+footer{
+    border: aquamarine 1px solid;
+    min-height: 150px;
+}
+
+#shadow{
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index:999;
+    background:rgba(0,0,0,0.8);
+}
+
+/*******************************************************************************/
+
+
