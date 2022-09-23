@@ -114,7 +114,6 @@
                 <div class="b-h-line">Главная d</div>
                 <div class="b-h-line">Главная d</div>
 
-                body <br><br><br><br><br><br><br><br><br>
 
             </div>
             <div class="b-down">
@@ -132,7 +131,6 @@
 
             const menuBody=()=>{
                 document.getElementById("menu").classList.toggle('active');
-                //document.getElementById("menu_body").classList.toggle('hide');
                 document.getElementById("menu_body").classList.toggle('active');
                 return false;
             }
@@ -141,7 +139,6 @@
             window.addEventListener("resize",()=>{
                 if(window.innerWidth>950){//скрыть бургер
                     document.getElementById("menu").classList.remove("active");
-                    //document.getElementById("menu_body").classList.add("hide");
                     document.getElementById("menu_body").classList.remove("active");
                 }
             },true);
