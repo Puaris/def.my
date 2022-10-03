@@ -81,7 +81,7 @@ header .arrow{position:absolute;bottom:-23px;left:28%;transform:rotate(351deg);}
 
 header .msg{display: grid; grid-template-columns:1fr 12fr;grid-column-gap:10px; align-items:center;}
 header .msg p{text-align:right}
-header .msgBtn{display: grid; grid-template-columns: 1fr 1fr; grid-column-gap:10px}
+header .msgBtn{display: grid; grid-template-columns: 1fr 1fr; grid-column-gap:10px;justify-content:center}
 header .msgBtn a{padding:9px 0;background:rgba(255,255,255,.07);border-radius:11px;text-align:center}
 header .msgBtn a:nth-child(1):hover{box-shadow: 0 0 10px 0 rgba(76,175,80,.5);background:rgba(76,175,80,.1)}
 header .msgBtn a:nth-child(2):hover{box-shadow: 0 0 10px 0 rgba(15,169,243,.5);background:rgba(15,169,243,.1)}
@@ -202,7 +202,11 @@ header .b-head{
     height:60px;
     width:100%;
 }
+header .b-body{
+    min-height: 350px;
+}
 header .b-down{
+    
     height: 70px;
     width: 100%;
     background-color:rgba(35,35,35,.97);
@@ -248,8 +252,16 @@ header .b-h-line a:hover{
     letter-spacing:2px;
 
 }
-
-
+header .b-down .msgBtn{
+padding: 13px 0;
+}
+header .b-phone{
+    padding:13px 0 0;
+    text-align: center;
+}
+header .b-phone a{color:#fcfcfc;
+}
+header .b-phone a:hover{color:#E5BB3B}
 /****************************************/
 /****************************************/
 @media (min-width: 1060px) and (max-width: 1260px){
@@ -296,6 +308,7 @@ header .b-h-line a:hover{
 @media (max-width:800px){
     header .phone{display:none}
     header .msg{display: none}
+    header .msgBtn{grid-template-columns:minmax(70px,30%) minmax(70px,30%)}
 }
 
 @media (max-width:800px){
