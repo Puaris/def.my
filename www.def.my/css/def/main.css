@@ -49,8 +49,8 @@ A:hover, .link:hover {
     position: relative;
     /*width: 1180px;*/
     max-width: 1280px;
-    border-left: burlywood 1px dotted;
-    border-right: burlywood 1px dotted;
+    /*border-left: burlywood 1px dotted;
+    border-right: burlywood 1px dotted;*/
     overflow: hidden;
 
 }
