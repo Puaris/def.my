@@ -1,31 +1,48 @@
 #b1{
-    position: relative;
-
+    position:relative;
     background:#202020 url("/img/b1/fon.jpg")no-repeat center top/cover;
     height:100vh;
-    padding:180px 0 260px;
-
+    padding:165px 0 260px;
+    overflow: hidden;
 
 }
 #b1 .cont{
     position: relative;
     width:100%;
     /*height: 250px;*/
-
     display: grid;
     grid-template-columns: 1.2fr 1fr;
-    grid-column-gap: 54px;
-    grid-row-gap: 20px;
-
+    grid-column-gap:45px;
+    grid-row-gap:20px;
     border: #CE8800 1px solid;
 }
 #b1 .l_b{
     display:grid;
+    border: #C12800 1px solid;
 }
+
+
+
+
+
+
+
+
+
+
 #b1 .r_b{
     position: relative;
+    border: #CE8150 1px solid;
 }
 #b1 .example{
-    position: relative;
-    min-height: 500px;
+    position:relative;
+    height:470px;
 }
+#b1 .example img:nth-child(1){
+    will-change: transform;
+    width: 380px;
+    position: absolute;
+    top: 0; left: -60px;}
+#b1 .example img:nth-child(2) {will-change: transform; width: 340px; position: absolute; bottom: 0; right: -10px;}
+#b1 .example img.landing1{animation: landing 4s linear infinite}
+#b1 .example img.landing2{animation: landing 3.3s linear infinite}
