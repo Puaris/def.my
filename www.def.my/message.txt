@@ -1,0 +1,2 @@
+ {"update_id":653600905,
+"message":{"message_id":107,"from":{"id":5526800205,"is_bot":false,"first_name":"\u0410\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440","language_code":"en"},"chat":{"id":5526800205,"first_name":"\u0410\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440","type":"private"},"date":1671778129,"text":"/start","entities":[{"offset":0,"length":6,"type":"bot_command"}]}}
