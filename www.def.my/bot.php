@@ -91,20 +91,20 @@ $ch = curl_init("https://api.telegram.org/bot". $token ."/setWebhook?" . http_bu
 
 
 
-$ch = curl_init("https://api.telegram.org/bot". $token ."/sendMessage");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-curl_setopt($ch, CURLOPT_HEADER, false);
-curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, $getQuery);
+// $ch = curl_init("https://api.telegram.org/bot". $token ."/sendMessage");
+// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+// curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+// curl_setopt($ch, CURLOPT_HEADER, false);
+// curl_setopt($ch, CURLOPT_POST, 1);
+// curl_setopt($ch, CURLOPT_POSTFIELDS, $getQuery);
 
-$resultQuery = curl_exec($ch);
-curl_close($ch);
+// $resultQuery = curl_exec($ch);
+// curl_close($ch);
 
-echo $resultQuery;
+// echo $resultQuery;
 
-$jsonArr=json_decode($resultQuery,true);
+// $jsonArr=json_decode($resultQuery,true);
 
-echo '<br><br><br>'.$jsonArr["result"]["chat"]["id"];
-echo '<br><br><br>'.$jsonArr["result"]["chat"]["first_name"].'<br><br><br>';
+// echo '<br><br><br>'.$jsonArr["result"]["chat"]["id"];
+// echo '<br><br><br>'.$jsonArr["result"]["chat"]["first_name"].'<br><br><br>';
 

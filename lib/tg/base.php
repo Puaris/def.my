@@ -30,9 +30,18 @@ class Base{
   }
 
 
-  // public function sendSMS(){
-
-  // }
+  public function inlineKeyboard(int|string $chatId,string $txt,array $arrKeyboard):array{
+    return [
+      'chat_id'	=>$chatId,
+      'text'  	=>$txt,
+      'parse_mode' => 'html',
+      'reply_markup' =>json_encode([
+        'inline_keyboard' =>$arrKeyboard,      
+        'one_time_keyboard' => false,//вылазит клавиатура если true
+        'resize_keyboard'=>true
+      ])
+    ];
+  }
 
 
   public function sendCurlInTg($query,$metod='sendMessage'){

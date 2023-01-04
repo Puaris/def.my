@@ -36,8 +36,8 @@ $getQuery=[
 
 // echo $res;
 
-$trans=Tg\Transport::Trans['bus']['name'];
-echo $trans;
+
+
 
 //Главное меню
 // $getQuery =[
@@ -64,8 +64,66 @@ echo $trans;
 
 
 
-$res= $menu->MainMenu($chatId);
+// $res= $menu->MainMenu($chatId);
 
-var_dump($res);
+// var_dump($res);
 
 //$base->sendCurlInTg($menu->MainMenu($chatId));  
+
+//будем перебирать массив с маршрутами автобусов
+
+
+// foreach(Tg\Transport::BUS_MARSHRUT as $k => $v) {
+//     echo "Item=" . $k . ", Value=" . $v[1].'<br>';
+
+// }
+
+// echo '<br><br><br>';
+
+
+$arrKeyboard=[];
+$i = 1;
+$arrKeyboardRow=[];
+foreach(Tg\Transport::BUS_MARSHRUT as $k => $v) {
+    //echo "Item=" . $k . ", Value=" . $v[1].'<br>';
+
+    $arrStep=[];
+
+    $arrStep['text']=$k;
+    $arrStep['callback_data']='BusMarshrut_'.$k;
+
+    array_push ($arrKeyboardRow,$arrStep);
+    if ($i % 5 === 0){
+        array_push($arrKeyboard,$arrKeyboardRow);
+        $arrKeyboardRow=[];
+    }$i++;
+}if(!empty($arrKeyboardRow))array_push($arrKeyboard,$arrKeyboardRow);
+
+//var_dump($arrKeyboard);
+
+//echo '<br><br><br>';
+
+/*echo '<pre>';
+print_r($arrKeyboard);
+echo '</pre>';
+$getQuery=[
+    "chat_id"	=>$chatId,
+    "text"  	=>"Кнопки",
+
+    'reply_markup' =>json_encode([
+      'inline_keyboard' =>$arrKeyboard,      
+      'one_time_keyboard' => false,//вылазит клавиатура если true
+      'resize_keyboard'=>true
+    ])
+];*/
+//$base->inlineKeyboard($chatId,'',$arrKeyboard);
+
+ $res=$base->sendCurlInTg($base->inlineKeyboard($chatId,'Маршруты городских автобусов',$arrKeyboard));
+
+ echo $res;
+// $busMarshrut=Tg\Transport::BUS_MARSHRUT['1'][0];
+
+
+
+
+// echo $busMarshrut;
