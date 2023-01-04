@@ -1,12 +1,12 @@
 <?php
 
 
-$token = "";
+$token = "5881854779:AAGFzyN03hZeL2Su9u12v61cfBKV0J6lm4E";
 //$chat_id = -594377170;
 $chat_id = 5526800205;
 
 //Чтоб узнать свой id
-//https://api.telegram.org/bottoken/getUpdates
+//https://api.telegram.org/bot5881854779:AAGFzyN03hZeL2Su9u12v61cfBKV0J6lm4E/getUpdates
 /*
 $textMessage = "Саше";
 $textMessage = urlencode($textMessage);

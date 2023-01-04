@@ -1,33 +1,71 @@
 <?php
 namespace lib\Tg;
 
+use incl\Tg As Tg;
+
 Error_Reporting(E_ALL & ~E_NOTICE);ini_set('display_errors',1);
 set_include_path(get_include_path().PATH_SEPARATOR.'../../');spl_autoload_register();
 
+$base= new Base(Tg\Opt::TOKEN['SBT']);//MSB
+$menu= new Tg\Menu();
 
 
 
 
-$test= new Base(\incl\Tg\Opt::TOKEN['MSB']);
+//куда-то всунуть
+$data = file_get_contents('php://input');
 
 
- // Правильное чтение.
- //var_dump($test->tg_uri); // string(6) "foobar"
+//Сохранить запрос в файл
+$base->writeLogFile( __DIR__.'/messageTest.txt',$data,true);
 
- echo $test->tg_uri;
+$chatId = 5526800205;
+//++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++
+//SMS
+$getQuery=[
+    "chat_id"     => $chatId,
+    "text"        => 'Hello!',
+    "parse_mode"  => "html"
+];
 
 
- $test->writeLogFile( __DIR__.'/message.txt',$test->tg_uri,true);
 
- echo '<br>';
-$hello=new Hello();
-//echo new Hello();
+// $res=$base->sendCurlInTg($getQuery);
+
+// echo $res;
+
+$trans=Tg\Transport::Trans['bus']['name'];
+echo $trans;
+
+//Главное меню
+// $getQuery =[
+//       "chat_id" 	=>  $chatId,
+//       "text"  	=> "Главное меню",
+//       "parse_mode" => "html",
+    
+//     'reply_markup' => json_encode([
+//       'keyboard' =>[
+//             [//Массив ряда
+//                     [//Массив кнопки
+//                   'text' => '🚕Транспорт',
+//                   'callback_data' => 'Trans'],
+//             ],
+//             [                      
+//                     [
+//                   'text' => 'Главное меню',
+//                   'callback_data' => 'MainMemu'],
+//             ]
+//       ],      
+//       'one_time_keyboard' => false,//вылазит клавиатура если true
+//     ])
+// ];
 
 
 
-echo $hello->hello.'<br>';
+$res= $menu->MainMenu($chatId);
 
-echo $hello;
+var_dump($res);
 
-date_default_timezone_set("Europe/Moscow");
-echo '<br>'.date("d.m.Y H:i:s T", time()).'<br>';
+//$base->sendCurlInTg($menu->MainMenu($chatId));  

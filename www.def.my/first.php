@@ -1,16 +1,17 @@
 <?php
 namespace lib\Tg;
+use incl\Tg As Tg;
 Error_Reporting(E_ALL & ~E_NOTICE);ini_set('display_errors',0);
 set_include_path(get_include_path().PATH_SEPARATOR.'../../');spl_autoload_register();
 
 $base= new Base(\incl\Tg\Opt::TOKEN['MSB']);
-
+$menu= new Tg\Menu();
 
 //куда-то всунуть
 $data = file_get_contents('php://input');
 
 
-
+//Сохранить запрос в файл
 $base->writeLogFile( __DIR__.'/message.txt',$data,true);
 
 
@@ -21,34 +22,72 @@ $arrDataAnswer = json_decode($data, true);
 
 if(!empty($arrDataAnswer["message"])){
 
-  $textMessage = mb_strtolower($arrDataAnswer["message"]["text"]);
+  $textMessage = $arrDataAnswer["message"]["text"];
+  $chatId = $arrDataAnswer["message"]["chat"]["id"];  
   
-  //Поздароваться первый раз
-  if($textMessage=='/start')$textMessage=new Hello().', '.$arrDataAnswer['message']['from']['first_name'].'!';
-  
-  
+  switch ($textMessage) {
+    // если начало диалога
+    case '/start':
+          $textMessage=new Hello().', '.$arrDataAnswer['message']['from']['first_name'].'!';
+          $getQuery =[
+            "chat_id"     => $chatId,
+            "text"        => $textMessage,
+            "parse_mode"  => "html"
+          ];
+          $base->sendCurlInTg($getQuery);
 
-  if($textMessage=='1111')$textMessage='Зачем, ты - Пони, это нажимал???';
+          $base->sendCurlInTg($menu->MainMenu($chatId));
+    break;
+   
+    case Tg\Transport::Btn['MainMenu']://Тут надо меню - назад в главное меню
+      $base->sendCurlInTg($menu->MainMenu($chatId));
+    break;
+//Bus menu
+    case Tg\Menu::Btn['Transport']://Первое меню транспорта 'Transport'=>'🚕Транспорт',
+      $transport=new Tg\Transport();
+      $base->sendCurlInTg($transport->FirstMenu($chatId));
+    break;
+    case Tg\Transport::Btn['Bus']://Второе меню транспорта 'Bus'=>'🚌 Автобус',
+      $transport=new Tg\Transport();
+      $base->sendCurlInTg($transport->SecondMenuBus($chatId));
+    break;
+    case Tg\Transport::Btn['BusMarshrut']://Второе меню транспорта 'BusMarshrut'=>'🌍 Автобусные маршруты'
+      $transport=new Tg\Transport();
+      $base->sendCurlInTg($transport->BusMarshrutMenu($chatId));
+    break;
 
-  $chatId = $arrDataAnswer["message"]["chat"]["id"];
-  
-  //$textMessage=new Base();
 
-//SMS
-$getQuery =[
-    "chat_id"     => $chatId,
-    "text"        => $textMessage,
-    "parse_mode"  => "html"
-];
 
-$ch = curl_init($base->tg_uri."sendMessage");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-curl_setopt($ch, CURLOPT_HEADER, false);
-curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, $getQuery);
 
-$resultQuery = curl_exec($ch);
-curl_close($ch);
+    case Tg\Menu::Btn['Info']://Первое меню инфо
+        $textMessage='Обработать Info)';
+        $getQuery =[
+          "chat_id"     => $chatId,
+          "text"        => $textMessage,
+          "parse_mode"  => "html"
+        ];
+        $base->sendCurlInTg($getQuery);
+    break;
+
+
+
+        // незапланированное действие обрабатываем как поумолчанию
+    default:
+            $textMessage = mb_strtolower($arrDataAnswer["message"]["text"]);
+            $getQuery =[
+              "chat_id"     => $chatId,
+              "text"        => $textMessage,
+              "parse_mode"  => "html"
+            ];
+            $base->sendCurlInTg($getQuery);
+      break;
+    }
+
+
+
+
+
+
+
 
 }
