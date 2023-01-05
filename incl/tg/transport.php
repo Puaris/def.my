@@ -1,6 +1,7 @@
 <?php
 namespace incl\Tg;
-class Transport{
+use lib\Tg As Tg;
+class Transport extends Tg\Base{
     
     //const TOKEN=['MSB'=>'0006749279:AAH000CpMi670nbhjnF0dmO_Pjw-0nfYh0GFk','SBT'=>'5881854779:AAGFzyN03hZeL2Su9u12v61cfBKV0J6lm4E'];
       const Btn=[
@@ -35,6 +36,8 @@ class Transport{
       '2T'=>['ТФД','Драмтеатр'],
       '3T'=>['ЖМР Западный','Переход']
     ];
+
+    public function __construct(){}
 
     
     public function FirstMenu(int|string $chatId):array{
@@ -80,24 +83,26 @@ class Transport{
     public function BusMarshrutMenu(int|string $chatId):array{
 
     //Кнопки инлайновые+
-
-      return [
-        'chat_id'	=>$chatId,
-        'text'  	=>"Кнопки",
     
-          'reply_markup' =>json_encode([
-          'inline_keyboard' =>$arrKeyboard,      
-          'one_time_keyboard' => false,//вылазит клавиатура если true
-          'resize_keyboard'=>true
-        ])
-      ];
+    $arrKeyboard=[];
+    $i = 1;
+    $arrKeyboardRow=[];
+    foreach(self::BUS_MARSHRUT as $k => $v) {
+
+    $arrStep=[];
+
+    $arrStep['text']=$k;
+    $arrStep['callback_data']='BusMarshrut_'.$k;
+
+    array_push ($arrKeyboardRow,$arrStep);
+    if ($i % 6 === 0){
+        array_push($arrKeyboard,$arrKeyboardRow);
+        $arrKeyboardRow=[];
+    }$i++;
+    }if(!empty($arrKeyboardRow))array_push($arrKeyboard,$arrKeyboardRow);
+
+    return $this->inlineKeyboard($chatId,'Маршруты городских автобусов',$arrKeyboard);
     }
-
-    
-
-
-
-
 
     
 }

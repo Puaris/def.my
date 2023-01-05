@@ -9,6 +9,8 @@ set_include_path(get_include_path().PATH_SEPARATOR.'../../');spl_autoload_regist
 $base= new Base(Tg\Opt::TOKEN['SBT']);//MSB
 $menu= new Tg\Menu();
 
+$transport=new Tg\Transport();
+
 
 
 
@@ -80,7 +82,7 @@ $getQuery=[
 
 // echo '<br><br><br>';
 
-
+/*
 $arrKeyboard=[];
 $i = 1;
 $arrKeyboardRow=[];
@@ -98,6 +100,7 @@ foreach(Tg\Transport::BUS_MARSHRUT as $k => $v) {
         $arrKeyboardRow=[];
     }$i++;
 }if(!empty($arrKeyboardRow))array_push($arrKeyboard,$arrKeyboardRow);
+*/
 
 //var_dump($arrKeyboard);
 
@@ -118,7 +121,9 @@ $getQuery=[
 ];*/
 //$base->inlineKeyboard($chatId,'',$arrKeyboard);
 
- $res=$base->sendCurlInTg($base->inlineKeyboard($chatId,'Маршруты городских автобусов',$arrKeyboard));
+ //$res=$base->sendCurlInTg($base->inlineKeyboard($chatId,'Маршруты городских автобусов',$arrKeyboard));
+
+$res=$base->sendCurlInTg($transport->BusMarshrutMenu($chatId));
 
  echo $res;
 // $busMarshrut=Tg\Transport::BUS_MARSHRUT['1'][0];
@@ -127,3 +132,5 @@ $getQuery=[
 
 
 // echo $busMarshrut;
+
+//var_dump($transport->BusMarshrutMenu($chatId));

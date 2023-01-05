@@ -83,11 +83,13 @@ if(!empty($arrDataAnswer["message"])){
       break;
     }
 
-
-
-
-
-
-
+}elseif(!empty($arrDataAnswer["callback_query"])){
+  $chatId = $arrDataAnswer["callback_query"]["message"]["chat"]["id"];
+  $getQuery =[
+    "chat_id"     => $chatId,
+    "text"        => 'Нажал <b>кнопочку</b>!)',
+    "parse_mode"  => "html"
+  ];
+  $base->sendCurlInTg($getQuery);
 
 }

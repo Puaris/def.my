@@ -1,9 +1,6 @@
 <?php
-/**
- * Базовый класс
- */
+/**Базовый класс*/
 namespace lib\Tg;
-//use lib\Def As Def;
 
 class Base{
 
