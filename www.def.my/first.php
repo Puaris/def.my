@@ -95,7 +95,9 @@ if(!empty($arrDataAnswer["message"])){
   switch ($arrCallBackQuery[0]) {
     // если начало диалога
     case 'BusMarshrut':
+      //тут обработку маршрута автобуса
       
+
       break;
 
 
