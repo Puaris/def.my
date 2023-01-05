@@ -2,6 +2,7 @@
 namespace lib\Tg;
 
 use incl\Tg As Tg;
+use lib\Def As Def;
 
 Error_Reporting(E_ALL & ~E_NOTICE);ini_set('display_errors',1);
 set_include_path(get_include_path().PATH_SEPARATOR.'../../');spl_autoload_register();
@@ -123,13 +124,15 @@ $getQuery=[
 
  //$res=$base->sendCurlInTg($base->inlineKeyboard($chatId,'Маршруты городских автобусов',$arrKeyboard));
 
-$res=$base->sendCurlInTg($transport->BusMarshrutMenu($chatId));
+//$res=$base->sendCurlInTg($transport->BusMarshrutMenu($chatId));
 
- echo $res;
+//echo $res;
 // $busMarshrut=Tg\Transport::BUS_MARSHRUT['1'][0];
 
+$sms='BusMarshrut_15';
+$arrCallBackQuery=Def\Route::textSeparator($sms,'_');
 
-
+echo $arrCallBackQuery[1];
 
 // echo $busMarshrut;
 

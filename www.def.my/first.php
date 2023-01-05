@@ -1,5 +1,6 @@
 <?php
 namespace lib\Tg;
+use lib\Def As Def;
 use incl\Tg As Tg;
 Error_Reporting(E_ALL & ~E_NOTICE);ini_set('display_errors',0);
 set_include_path(get_include_path().PATH_SEPARATOR.'../../');spl_autoload_register();
@@ -84,12 +85,35 @@ if(!empty($arrDataAnswer["message"])){
     }
 
 }elseif(!empty($arrDataAnswer["callback_query"])){
+
   $chatId = $arrDataAnswer["callback_query"]["message"]["chat"]["id"];
-  $getQuery =[
-    "chat_id"     => $chatId,
-    "text"        => 'Нажал <b>кнопочку</b>!)',
-    "parse_mode"  => "html"
-  ];
-  $base->sendCurlInTg($getQuery);
+
+  $command=$arrDataAnswer["callback_query"]["data"];
+
+  $arrCallBackQuery=Def\Route::textSeparator($command,'_');
+
+  switch ($arrCallBackQuery[0]) {
+    // если начало диалога
+    case 'BusMarshrut':
+      
+      break;
+
+
+
+        // незапланированное действие обрабатываем как поумолчанию
+    default:
+    $sms='Нажал на кнопочку '.$arrCallBackQuery[0];
+  
+    $getQuery =[
+      "chat_id"     => $chatId,
+      "text"        => $sms,
+      "parse_mode"  => "html"
+    ];
+    $base->sendCurlInTg($getQuery);
+
+    break;
+  }
+
+  
 
 }
