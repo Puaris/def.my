@@ -91,11 +91,11 @@ class Transport extends Tg\Base{
 
     $arrStep=[];
 
-    $arrStep['text']=$k;
+    $arrStep['text']='№'.$k.' ('.$v[0].' - '.$v[1].')';
     $arrStep['callback_data']='BusMarshrut_'.$k;
 
     array_push ($arrKeyboardRow,$arrStep);
-    if ($i % 6 === 0){
+    if ($i % 1 === 0){
         array_push($arrKeyboard,$arrKeyboardRow);
         $arrKeyboardRow=[];
     }$i++;
