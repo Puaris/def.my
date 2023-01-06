@@ -97,8 +97,21 @@ if(!empty($arrDataAnswer["message"])){
     case 'BusMarshrut':
       //тут обработку маршрута автобуса
       
-
-      break;
+      $sms='Автобус '.$arrCallBackQuery[1];
+  
+      // $getQuery =[
+      //   "chat_id"     => $chatId,
+      //   "text"        => 'Автобусный маршрут №'.$arrCallBackQuery[1],
+      //   "parse_mode"  => "html"
+      // ];
+      $getQuery =[
+        'chat_id' => $chatId,
+        'caption' => 'Автобусный маршрут №'.$arrCallBackQuery[1],
+        'document' => curl_file_create(__DIR__ . '/img/bus/'.$arrCallBackQuery[1].'.jpg', 'image/jpg' , $arrCallBackQuery[1].'.jpg')
+      ];
+      $base->sendCurlInTg($getQuery,'sendDocument');
+  
+    break;
 
 
 
