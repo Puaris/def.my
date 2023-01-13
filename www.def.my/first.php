@@ -104,6 +104,9 @@ if(!empty($arrDataAnswer["message"])){
       //   "text"        => 'Автобусный маршрут №'.$arrCallBackQuery[1],
       //   "parse_mode"  => "html"
       // ];
+
+      
+
       $getQuery =[
         'chat_id' => $chatId,
         'caption' => 'Автобусный маршрут №'.$arrCallBackQuery[1],

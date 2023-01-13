@@ -3,10 +3,6 @@
 
     border:coral 1px dotted;
 
-    /*background:#252525 url("/img/b1/fon1.jpg")no-repeat center top/cover;*/
-
-    min-height:300px;
-    padding:10px 0 20px;
-
-
+    background:#FEFEFE;
+    padding:100px 0 220px;
 }
