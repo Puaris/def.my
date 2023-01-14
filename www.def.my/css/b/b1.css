@@ -112,20 +112,26 @@
         display: none;
     }
 }
-#b1 .example{
+#b1 .examp{
     position:relative;
     height:470px;
 }
-#b1 .example img:nth-child(1){
+#b1 .examp img:nth-child(1){
     will-change: transform;
     width: 380px;
     position: absolute;
     top: 0; left: -60px;}
-#b1 .example img:nth-child(2){
+#b1 .examp img:nth-child(2){
     will-change:transform;
     width:340px;
     position:absolute;
     bottom:0;
     right:-5px;}
-#b1 .example img.landing1{animation: landing 4s linear infinite}
-#b1 .example img.landing2{animation: landing 3.3s linear infinite}
+
+
+#b1 .examp img.landing1{animation: examp 4s linear infinite}
+#b1 .examp img.landing1:hover{
+    transform:scale(1.1);left:-150px;}
+#b1 .examp img.landing2{animation: examp 3.3s linear infinite}
+#b1 .examp img.landing2:hover{
+    transform:scale(1.1);right:15px;}

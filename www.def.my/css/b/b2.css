@@ -6,3 +6,18 @@
     background:#FEFEFE;
     padding:100px 0 220px;
 }
+#b2 .heading h2 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 110%;
+    letter-spacing: -0.03em;
+    color: #2F3036;
+    margin-bottom: 70px;}
+
+    .fact{
+        border:#2F3036 solid 1px;
+        min-height:350px;
+        max-width:300px;
+        min-width: 150px;;
+        margin: 10px ;
+    }
