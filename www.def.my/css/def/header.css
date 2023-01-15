@@ -21,11 +21,6 @@ header .maxw{
     overflow:visible;
     /*overflow:hidden;*/
 }
-header .maxw div{
-    /*border-right: 1px solid #13E8E9;
-    border-left: 1px solid #13E8E9;
-    background-color: #CE8800;*/
-}
 
 header .logo img {margin-right: 10px; vertical-align: middle;}
 header .logo p {vertical-align: middle;display: inline-block; color: #A7A7A7;   line-height: 17px;}
@@ -72,7 +67,7 @@ header .kp button:hover:after {
 
 header .kp button img {position: absolute; top:6px; right:11px; width:34px;}
 
-header .kp button:hover img,header  .kp button:hover {transform: scale(1.03);}
+header .kp button:hover img,header .kp button:hover {transform: scale(1.03);}
 
 header .arrow{position:absolute;bottom:-23px;left:28%;transform:rotate(351deg);}
 

@@ -45,13 +45,35 @@
         }
     }
 #b1 .l_b h2 {
-    margin:0;
+    margin:0 0 20px;
     text-align:left;
     font-weight:300;
     font-size:32px;
     line-height:130%;
     letter-spacing:-0.03em;
-    margin-bottom:20px}
+}
+
+    .typewriter{
+        /* font-family: monospace; */
+        overflow:hidden; /*Гарантирует, что содержимое не будет раскрыто до тех пор, пока анимация*/
+        border-right: .1em solid rgba(255,255,255,.0); /*Курсор пишущей машинки*/
+    }
+    @media (min-width: 1190px) {
+        .typewriter{
+            white-space:nowrap;/*  Сохраняет содержимое в одной строке */
+            animation: 
+                typing 7s steps(39, end),
+                blinkTextCursor 500ms steps(39) 16 normal;       
+        }
+    }
+    @keyframes typing {
+    from { width:0% }
+    to { width: 100% }
+    }
+    @keyframes blinkTextCursor{
+        from{border-right-color: rgba(255,255,255,.75);}
+        to{border-right-color: transparent;}
+    }
 
 
 #b1 .l_b p:nth-child(4) {
@@ -94,11 +116,6 @@
     font-size: 16px;
     line-height: 19px;
     color: #fcfcfc;}
-
-
-
-
-
 
 
 

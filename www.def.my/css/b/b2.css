@@ -12,12 +12,38 @@
     line-height: 110%;
     letter-spacing: -0.03em;
     color: #2F3036;
-    margin-bottom: 70px;}
+    margin-bottom:70px;}
 
-    .fact{
-        border:#2F3036 solid 1px;
+    @media (max-width:420px){
+        #b2 .heading h2{
+            font-weight:500;
+            font-size:34px;
+            line-height:100%;
+        }
+    }
+#b2 .fact{
+        position:relative;
+        padding:130px 5px 14px;
+        background: #ECECEC;
+        border-radius: 11px;;
         min-height:350px;
         max-width:300px;
         min-width: 150px;;
-        margin: 10px ;
+        margin:9px ;
+        /* overflow-x: hidden; */
     }
+    #b2 .fact:last-child,#b2 .fact:nth-child(2) {background-color: #1B1E1F;}
+    #b2 .fact img {
+        position: absolute;
+        top: -30px; right:0;
+        max-width: 180px;}
+
+    #b2 .fact h4{
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 110%; color: #2F3036;}
+
+
+    #b2 .fact:last-child p,#b2 .fact:nth-child(2) p,
+    #b2 .fact:last-child h4,#b2 .fact:nth-child(2) h4{color:#fcfcfc}
