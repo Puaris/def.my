@@ -85,4 +85,50 @@ footer{
 
 /*******************************************************************************/
 
+/*Анимация*/
+.a-show{
+  opacity:.01;
+  animation: a-show 2.5s forwards;
+}
+@keyframes a-show{
+    0%{opacity:.01}
+    100%{opacity:1}
+}
 
+
+.a-to-right{
+    transform: translateX(-150%);
+    animation: a-to-right 1500ms forwards;
+}
+@keyframes a-to-right{
+    0% {transform: translateX(-150%);}
+    100% {transform: translateY(0);}
+}
+
+.a-to-up{
+  transform: translateY(150%);
+  animation: a-to-up 1s forwards;
+}
+@keyframes a-to-up{
+    0% {transform: translateY(150%);}
+    100% {transform: translateY(0);}
+  }
+
+.a-expansion{
+    position: absolute; overflow: hidden; top: 15px; left: 0; width: 0;
+    text-align: right; white-space: nowrap;
+    animation:expansion 2s linear forwards;  
+}
+@keyframes expansion{
+    0% {left: 40px; width: 0;}
+    100% {left: 0; width: 75px;}
+}
+
+.a-img-full{
+    max-width:1px;
+    animation:a-img-full 2s linear forwards;
+}
+@keyframes a-img-full{
+    0% {max-width:1px;}
+    100% {max-width:100%;}
+}
