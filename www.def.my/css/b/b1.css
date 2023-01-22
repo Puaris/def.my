@@ -1,10 +1,16 @@
 #b1{
     position:relative;
     background:#202020 url("/img/b1/fon.jpg")no-repeat center top/cover;
-    min-height:100vh;
-    padding:170px 0 0;
+    /*min-height:100vh;*/
+    padding:170px 0 260px;
     color:#fcfcfc;
 }
+@media (min-width:1921px) {
+    #b1{
+        padding:260px 0;
+    }
+}
+
 #b1 .cont{
     position: relative;
     width:100%;
@@ -29,6 +35,11 @@
     letter-spacing:-0.03em;
     color:#DDDDDD;
     margin:10px 0}
+    @media (min-width:1921px) {
+        #b1 .l_b p:nth-child(1){
+            margin:32px 0
+        }
+    }
 
 #b1 .l_b h1 {
     margin:0;
@@ -73,6 +84,11 @@
     @keyframes blinkTextCursor{
         from{border-right-color: rgba(255,255,255,.75);}
         to{border-right-color: transparent;}
+    }
+    @media (min-width:1921px) {
+        #b1 .l_b h2{
+            margin:25px 0;
+        }
     }
 
 
@@ -144,7 +160,11 @@
     position:absolute;
     bottom:0;
     right:-5px;}
-
+    @media (min-width:1921px) {
+        #b1 .l_b h2{
+            margin:25px 0;
+        }
+    }
 
 #b1 .examp img.landing1{animation: examp 4s linear infinite}
 #b1 .examp img.landing1:hover{
