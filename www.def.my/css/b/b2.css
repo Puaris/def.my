@@ -25,10 +25,19 @@
         border-radius: 11px;;
         min-height:350px;
         max-width:300px;
-        min-width: 150px;;
-        margin:9px ;
+        min-width: 150px;
+        margin:9px;
         /* overflow-x: hidden; */
     }
+
+@media (max-width: 1300px){
+    #b2 .fact{margin:9px 2px;}
+}
+
+@media (min-width: 1120px) and (max-width: 1300px){
+    #b2 .fact{max-width:270px; min-height:384px;}
+}
+
     #b2 .fact:last-child,#b2 .fact:nth-child(2) {background-color: #1B1E1F;}
     #b2 .fact img {
         position: absolute;
