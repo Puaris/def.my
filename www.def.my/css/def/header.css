@@ -84,7 +84,7 @@ header .msgBtn a:nth-child(2):hover{box-shadow: 0 0 10px 0 rgba(15,169,243,.5);b
 
 
 header .phone {text-align: right;}
-header .phone a {font-weight:600; font-size: 20px; line-height: 24px; color:#fcfcfc; display: block; margin-bottom: 10px;}
+header .phone a {font-weight:600; font-size: 20px; line-height: 24px; color:#fcfcfc; display: block; margin-bottom: 10px;text-decoration:none}
 header .phone a:hover {color:#E5BB3B; font-size:21px}
 header .phone p{font-weight: 400; font-size: 14px; line-height: 17px;color:#A7A7A7}
 
