@@ -47,7 +47,15 @@
     font-weight:700;
     font-size:48px;
     line-height:111%;
-    letter-spacing:-0.03em;}
+    letter-spacing:-0.03em;
+
+    /*color: transparent;
+    background:!*#fcfcfc *!url("/img/b1/abstract.jpg");*/
+    background-clip:padding-box;
+
+
+
+}
     @media (max-width:365px){
         #b1 .l_b h1{
             font-weight:500;
@@ -78,8 +86,12 @@
         }
     }
     @keyframes typing {
-    from { width:0% }
-    to { width: 100% }
+        0%{width:0}
+        38%{width:38%}
+        42%{width:42%}
+        47%{width:38%}
+        60%{width:38%}
+        100%{width:100%}
     }
     @keyframes blinkTextCursor{
         from{border-right-color: rgba(255,255,255,.75);}
