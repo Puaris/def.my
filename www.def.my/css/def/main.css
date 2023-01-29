@@ -68,8 +68,20 @@ A:hover, .link:hover {
 
 
 footer{
-    border: aquamarine 1px solid;
-    min-height: 150px;
+    /*border: aquamarine 1px solid;*/
+    /*min-height: 150px;*/
+
+    position: sticky;
+    /*position: -webkit-sticky;*/
+    bottom: 0;
+    z-index: -1;
+    min-height: 350px;
+    background-color: dodgerblue;
+    color: white;
+    text-shadow: 2px 2px black;
+    padding: 5px 0;
+    text-align: center;
+
 }
 
 #shadow{
