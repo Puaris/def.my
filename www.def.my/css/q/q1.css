@@ -57,8 +57,8 @@
 
 #q1 .quation:nth-child(1) label{
     position: relative;
-    background: radial-gradient(#353535, #0E0E0E);;
-    /* padding: 24px 0px 0px 0px; */
+    background: radial-gradient(#353535, #0E0E0E);
+    cursor:pointer;
     border-radius:9px;
     text-align: center
 }
@@ -89,27 +89,38 @@
     border-radius:5px;
     border: 1px solid #D1D1D1; 
   }
-
+#q1 .quation:nth-child(1) label>input+span::after{
+    opacity: 0;
+    background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD30lEQVR4nO2XXWyTVRjHf+d9+/ZjqxSq2zrHxlAncytkFGhLXWayTBTpyvRC9MIIYtTEC5UYL4xm6oUYuEMTv70hgBlmsq2bwBCcsoljUtjAr0RFF0NiAKOiXniheUhn6vp2G2alb01/yXPV9+n5n3OerwMFChQoUOB/RDHQDtxOHtIMjGs29TXwPWAnj9gE/Fa9uqw31h0Z1WzqK2A9ecKTKM5G2msPtPWsPClWfWtpHOglD2hHca7xBf/7E+LFWl5tGAJ+T+aEZdmA4nzj83UHU8VPmGZonwNrsShh4MKyTTX7zMSLlS6d2we8hgXxAT9UNpfEM4kXW/lMbT9wHnBjITRgf1G5Y2Aq8W1J053aSeAxLMTjSlffrdm5YmQmG6i5o6IH+Au4HwsQkFoffnpRxrhvS7Gb3wgM6g5tDBgAPLkW7wDGyoLevpmIb9q6uF9pSrrxDqt05M26Qzu1tjN8YjrxtesquoBfxAdQs7H4dck/fAow/oN/SEJncrOabLE9oVHv9e69ycozq/X/Cd2pjWmG9iWw9xK7ow4cKw9PHTrRjtCIfY5xBPgseWCzyuC1MV9PtCOYsHuMYaD/Em7iIaWr063vhI9nEr9mR/CozaV/ChzORrKWAn+uenPZx7JY6+5gQndqo8ArM/D1AmeXPLAw4+mv3r78SLLSHMpWw7pTki91UdmM0tQZ4NFpfF+ye4xPMp7828GjuqGdAvYBLrLENkmsyYtHnquTMPoViGbwuwH4o2mL/5CZ+NbOcMLu1iUcPwCcZJFE3fpK05nFf98CSeifgQYTv/ic6qJ/5vt/WXdktMjnlAOQ0JmXTfE2KX+lSz1xWdRMzPybSuTRMQ6Up/i1yKS56vXAkJlPyRKPPFa+meSTNW4EvrV7jKHorpDp/FJ8tUPCoDulbB4vWz631+zbxQ9WdydvTULssiGl7aDu1BK37VyRlpQymCldyS3cA2xUmhqXkjv5u+YXGwbkAQPcRQ5wAX2GWx+OdabX9MAj17wHnAPO1G+oSjt98dEdF0fjbeSQYknqK6pc+83Cw3WlfVAandlvvtA8CZ0RKwxmlXLKFY1XdaWPA8GEWcdt2uo/IEmdoVrlBBnOLvg3Ltgz3WQZezc0pju1E8AWLMbdMqE2bq7vn2oDC6O+rmTJLMKCPCuPjlveChw2nTB3hUaU4kegDYuigA6bSz/WujuUVjalAQIfYnFcwLDDa3wkD5IJ8S0vNwwkEzdIHlAKfOGe7+pv64qMXSypJXbZwHbyiErgtHeRO15/b5Uk7k9AGXlGjfQIGaOBdeQpfuDhXIsoUKBAAS4bfwM5lo7JpYSmBAAAAABJRU5ErkJggg==");
+    content: "";
+    width:48px;
+    height:48px;
+    position: absolute;
+    left:52%;
+    bottom: -63px;
+    transform: translate(-50%, 0);
+    transition:.5s;
+}
   /* стили при наведении курсора на радио */
 #q1 .quation:nth-child(1) label>input:not(:disabled):not(:checked)+span:hover::before{
     border-color: #F50000;
 }
 
 /* стили для активной радиокнопки (при нажатии на неё) */
-#q1 .quation:nth-child(1) label>input:not(:disabled):active+span::before {
+/*#q1 .quation:nth-child(1) label>input:not(:disabled):active+span::before {
     background-color: #b3d7ff;
     border-color: #b3d7ff;
-}
+}*/
 
 /* стили для радиокнопки, находящейся в фокусе */
 #q1 .quation:nth-child(1) label>input:focus+span::before {
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    box-shadow: 0 0 0 1px rgba(0, 12, 25, 0.2);
 }
   
 /* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
-#q1 .quation:nth-child(1) label>input:focus:not(:checked)+span::before {
+/*#q1 .quation:nth-child(1) label>input:focus:not(:checked)+span::before {
     border-color: #8000ff;
-}
+}*/
 
 /* стили для радиокнопки, находящейся в состоянии checked */
 #q1 .quation:nth-child(1) label>input:checked+span,
@@ -118,10 +129,13 @@
     border:3px solid #F50000;
 }
 #q1 .quation:nth-child(1) label>input:checked+span::before {
-    border-color: #0b76ef;
-    background-color: #0b76ef;
-    /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e"); */
+    border-color:#F50000;
+    background:radial-gradient(#353535,#0E0E0E);
 }
+#q1 .quation:nth-child(1) label>input:checked+span::after{
+    opacity:1;
+}
+
 
 /* стили для радиокнопки, находящейся в состоянии disabled */
 #q1 .quation:nth-child(1) label>input:disabled+span::before {
