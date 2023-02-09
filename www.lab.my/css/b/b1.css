@@ -1,14 +1,24 @@
 #b1{
     min-height:100vh;
-    background: #2F3036;
+    background: #2F3036 url(/img/b1/fon.png) no-repeat;
+    background-size:cover;
+    position:relative
 }
 
-#b1 > div{
-    position: sticky;
-    top: 0;
-    /*z-index: 0;*/
+#b1 .hfon{
+    position:absolute;
+    min-height:100%;
+    width:100%;
+    background-color:rgba(0,0,0,.77);
 }
 
+#b1 .maxw{
+    padding:150px 0 10px;
+}
+
+
+
+/*Temp*/
 
 #b2{
     min-height:900px;
