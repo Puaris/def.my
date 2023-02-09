@@ -1,0 +1,37 @@
+#b1{
+    min-height:100vh;
+    background: #2F3036;
+}
+
+#b1 > div{
+    position: sticky;
+    top: 0;
+    /*z-index: 0;*/
+}
+
+
+#b2{
+    min-height:900px;
+    /*background: #2F0036;*/
+}
+#b2 > div{
+    position: sticky;
+    top: 0;
+    z-index:1;
+}
+
+#b3{
+    min-height:1200px;
+    background: #250096;
+}
+#b3 > div{
+    position: sticky;
+    top: 0;
+    z-index:2;
+}
+
+
+#b4{
+    min-height:1200px;
+    background: #259996;
+}
