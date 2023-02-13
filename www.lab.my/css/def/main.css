@@ -19,13 +19,13 @@ body{
 }
 @keyframes body_gradient {
     0% {
-        background-position: 50% 0%;
+        background-position: 50% 0;
     }
     50% {
         background-position: 50% 100%;
     }
     100% {
-        background-position: 50% 0%;
+        background-position: 50% 0;
     }
 }
 h1, h2, h3, h4{
@@ -70,17 +70,6 @@ A:hover, .link:hover {
     border-right: burlywood 1px dotted;*/
     overflow: hidden;
 
-}
-
-#back{
-    /*background-color: rgba(220, 220, 20, 0.9);
-    background-image: url("/img/sh1/fon1.jpg");*/
-    position:absolute;
-    top: 0;
-    left: 0;
-    z-index:0;
-    height:100%;
-    width:100%;
 }
 
 
