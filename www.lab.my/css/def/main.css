@@ -1,7 +1,14 @@
+:root{
+
+    --logo-color:#008BD2;
+    --yellow-color:#E5BB3B;/*#F5E356;*/
+    --red-color:#E7552C;/*#CB6318*/
+    --white-color:#fcfcfc;
+}
 *{
-    outline: none;
-    transition: .4s;
-    font-family: "Montserrat", Helvetica,Arial, sans-serif;
+    outline:none;
+    transition:.4s;
+    font-family:"Montserrat",Helvetica,Arial,sans-serif;
     box-sizing:border-box
 }
 html,body{
