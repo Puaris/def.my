@@ -33,25 +33,47 @@ header .maxw{
     overflow:visible;
 
 }
-#logo{border-radius:50%;border-right:#7a00ff 1px solid;}
+#logo{border-radius:50%}
 #logo:hover{
     box-shadow:1px 3px 6px rgb(0,140,255);
     transform:skewY(2deg);
     animation:logo_shadow 1s;
 }@keyframes logo_shadow{0%{box-shadow:0 3px 1px rgb(0,140,255);}100%{box-shadow:1px 3px 6px rgb(0,140,255);}}
-
+#logo svg{
+    height:70%;
+    width:70%;
+}
 /*Меню*/
 header nav{
-    border-left:#7a00ff 1px solid;
     display:flex;
     justify-content:space-around;
     align-content:center;
     text-transform:uppercase;
 }
+
+header nav span{
+    position:relative;
+
+}
+
 header nav a{
     color:var(--yellow-color);
     text-decoration:none;
+    display:block;
 }
+header nav a:after{
+    content:"";
+    width:0;
+    height:2px;
+    position:absolute;
+    left: 0;
+    bottom:-5px;/*20px;*/
+    background:var(--yellow-color);
+    /*background:var(--white-color);*/
+    transition: all 0.5s linear;
+}
+header nav a:hover:after{width:100%}
+
 
 
 /*Меню End*/
