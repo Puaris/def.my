@@ -18,11 +18,11 @@ html,body{
     /*background-color:#fcfcfc;*/
     position: relative
 }
-body{
+.defFon{
     /*background: linear-gradient(110deg, #008BD2, #FEFEFE);*/
-    background: radial-gradient(#008BD2, #FEFEFE);
+    background: radial-gradient(#008BD2, #EEEEEE);
     background-size: 400% 400%;
-    animation: body_gradient 10s ease infinite;
+    animation: body_gradient 13s ease infinite;
 }
 @keyframes body_gradient {
     0% {

@@ -1,6 +1,6 @@
 #b1{
     min-height:100vh;
-    background: #2F3036 url(/img/b1/fon.png) no-repeat;
+    background: #2F3036 url(/img/b1/fon4.png) no-repeat;
     background-size:cover;
     position:relative
 }
@@ -16,6 +16,15 @@
     padding:150px 0 10px;
 }
 
+#b1 h1{
+    font-size: 8cqi;
+    color: var(--white-color);
+}
+
+#b1 h2{
+    font-size: 5cqi;
+    color: var(--yellow-color);
+}
 
 
 /*Temp*/
@@ -24,21 +33,21 @@
     min-height:900px;
     /*background: #2F0036;*/
 }
-#b2 > div{
+/* #b2 > div{
     position: sticky;
     top: 0;
     z-index:1;
-}
+} */
 
 #b3{
     min-height:1200px;
-    background: #250096;
+    /* background: #250096; */
 }
-#b3 > div{
+/* #b3 > div{
     position: sticky;
     top: 0;
     z-index:2;
-}
+} */
 
 
 #b4{

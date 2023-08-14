@@ -1,2 +1,134 @@
- {"update_id":653601084,
-"callback_query":{"id":"5290682059726529239","from":{"id":5526800205,"is_bot":false,"first_name":"\u0410\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440","language_code":"ru"},"message":{"message_id":489,"from":{"id":5926749279,"is_bot":true,"first_name":"\u0421\u0435\u0440\u0432\u0438\u0441 \u041c\u0430\u0440\u0438\u0443\u043f\u043e\u043b\u044c","username":"MariupolServiceBot"},"chat":{"id":5526800205,"first_name":"\u0410\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440","type":"private"},"date":1672902228,"text":"\u041c\u0430\u0440\u0448\u0440\u0443\u0442\u044b \u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0438\u0445 \u0430\u0432\u0442\u043e\u0431\u0443\u0441\u043e\u0432","reply_markup":{"inline_keyboard":[[{"text":"1","callback_data":"BusMarshrut_1"},{"text":"2","callback_data":"BusMarshrut_2"},{"text":"3","callback_data":"BusMarshrut_3"},{"text":"4","callback_data":"BusMarshrut_4"},{"text":"5","callback_data":"BusMarshrut_5"},{"text":"6","callback_data":"BusMarshrut_6"}],[{"text":"7","callback_data":"BusMarshrut_7"},{"text":"8","callback_data":"BusMarshrut_8"},{"text":"9","callback_data":"BusMarshrut_9"},{"text":"10","callback_data":"BusMarshrut_10"},{"text":"11","callback_data":"BusMarshrut_11"},{"text":"12","callback_data":"BusMarshrut_12"}],[{"text":"13","callback_data":"BusMarshrut_13"},{"text":"14","callback_data":"BusMarshrut_14"},{"text":"15","callback_data":"BusMarshrut_15"},{"text":"16","callback_data":"BusMarshrut_16"},{"text":"17","callback_data":"BusMarshrut_17"},{"text":"18","callback_data":"BusMarshrut_18"}],[{"text":"19","callback_data":"BusMarshrut_19"},{"text":"20","callback_data":"BusMarshrut_20"},{"text":"1T","callback_data":"BusMarshrut_1T"},{"text":"2T","callback_data":"BusMarshrut_2T"},{"text":"3T","callback_data":"BusMarshrut_3T"}]]}},"chat_instance":"447423521681658895","data":"BusMarshrut_12"}}
+{
+	"update_id": 653601084,
+	"callback_query": {
+		"id": "5290682059726529239",
+		"from": {
+			"id": 5526800205,
+			"is_bot": false,
+			"first_name": "Александр",
+			"language_code": "ru"
+		},
+		"message": {
+			"message_id": 489,
+			"from": {
+				"id": 5926749279,
+				"is_bot": true,
+				"first_name": "Сервис Мариуполь",
+				"username": "MariupolServiceBot"
+			},
+			"chat": {
+				"id": 5526800205,
+				"first_name": "Александр",
+				"type": "private"
+			},
+			"date": 1672902228,
+			"text": "Маршруты городских автобусов",
+			"reply_markup": {
+				"inline_keyboard": [
+					[
+						{
+							"text": "1",
+							"callback_data": "BusMarshrut_1"
+						},
+						{
+							"text": "2",
+							"callback_data": "BusMarshrut_2"
+						},
+						{
+							"text": "3",
+							"callback_data": "BusMarshrut_3"
+						},
+						{
+							"text": "4",
+							"callback_data": "BusMarshrut_4"
+						},
+						{
+							"text": "5",
+							"callback_data": "BusMarshrut_5"
+						},
+						{
+							"text": "6",
+							"callback_data": "BusMarshrut_6"
+						}
+					],
+					[
+						{
+							"text": "7",
+							"callback_data": "BusMarshrut_7"
+						},
+						{
+							"text": "8",
+							"callback_data": "BusMarshrut_8"
+						},
+						{
+							"text": "9",
+							"callback_data": "BusMarshrut_9"
+						},
+						{
+							"text": "10",
+							"callback_data": "BusMarshrut_10"
+						},
+						{
+							"text": "11",
+							"callback_data": "BusMarshrut_11"
+						},
+						{
+							"text": "12",
+							"callback_data": "BusMarshrut_12"
+						}
+					],
+					[
+						{
+							"text": "13",
+							"callback_data": "BusMarshrut_13"
+						},
+						{
+							"text": "14",
+							"callback_data": "BusMarshrut_14"
+						},
+						{
+							"text": "15",
+							"callback_data": "BusMarshrut_15"
+						},
+						{
+							"text": "16",
+							"callback_data": "BusMarshrut_16"
+						},
+						{
+							"text": "17",
+							"callback_data": "BusMarshrut_17"
+						},
+						{
+							"text": "18",
+							"callback_data": "BusMarshrut_18"
+						}
+					],
+					[
+						{
+							"text": "19",
+							"callback_data": "BusMarshrut_19"
+						},
+						{
+							"text": "20",
+							"callback_data": "BusMarshrut_20"
+						},
+						{
+							"text": "1T",
+							"callback_data": "BusMarshrut_1T"
+						},
+						{
+							"text": "2T",
+							"callback_data": "BusMarshrut_2T"
+						},
+						{
+							"text": "3T",
+							"callback_data": "BusMarshrut_3T"
+						}
+					]
+				]
+			}
+		},
+		"chat_instance": "447423521681658895",
+		"data": "BusMarshrut_12"
+	}
+}
