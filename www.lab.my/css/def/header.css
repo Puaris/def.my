@@ -1,4 +1,4 @@
-.st0{fill:var(--logo-color)}.logoabc{animation:logoboom 5s ease alternate infinite}.logoabc:nth-child(2){animation-delay:0.2s}.logoabc:nth-child(3){animation-delay:0.3s}.logoabc:nth-child(4){animation-delay:0.1s}.logoabc:nth-child(5){animation-delay: 0.2s}.logoabc:nth-child(6){animation-delay:0.3s}
+.st0{fill:var(--logo-col)}.logoabc{animation:logoboom 5s ease alternate infinite}.logoabc:nth-child(2){animation-delay:0.2s}.logoabc:nth-child(3){animation-delay:0.3s}.logoabc:nth-child(4){animation-delay:0.1s}.logoabc:nth-child(5){animation-delay: 0.2s}.logoabc:nth-child(6){animation-delay:0.3s}
 @keyframes logoboom{
     90%{transform:scale(1.0)}
     100%{transform:scale(1.05)}
@@ -14,13 +14,13 @@ header{
     right: 0;
     /*padding: 17px 0 40px;*/
 
-    background-color:rgba(23,23,23,.37);
+    background-color:rgba(23,23,23,.39);
     /*height:125px;*/
     z-index:5;
     font-size: 14px;
     font-weight: 300;
     line-height: 17px;
-    color: var(--white-color);
+    color: var(--white-col);
 }
 
 
@@ -33,17 +33,35 @@ header .maxw{
     overflow:visible;
 
 }
+@media (max-width: 850px) {
+    header .maxw{
+        grid-template-columns:150px 1fr;
+    }
+    header .l-cont{
+        display: none;
+    }
+}
+
 #logo{border-radius:50%}
 #logo:hover{
     box-shadow:1px 3px 6px rgb(0,140,255);
     transform:skewY(2deg);
     animation:logo_shadow 1s;
 }
-    @keyframes logo_shadow{0%{box-shadow:0 3px 1px rgb(0,140,255);}100%{box-shadow:1px 3px 6px rgb(0,140,255);}}
+    @keyframes logo_shadow{
+        0%{box-shadow:0 3px 1px rgb(0,140,255);}
+        100%{box-shadow:1px 3px 6px rgb(0,140,255);}}
 #logo svg{
     height:70%;
     width:70%;
 }
+@media (max-width: 850px) {
+    #logo svg{
+        height:50%;
+        width:50%;
+    }
+}
+
 /*Меню*/
 header nav{
     display:flex;
@@ -58,7 +76,7 @@ header nav span{
 }
 
 header nav a{
-    color:var(--yellow-color);
+    color:var(--yellow-col);
     text-decoration:none;
     display:block;
 }
@@ -69,8 +87,7 @@ header nav a:after{
     position:absolute;
     left: 0;
     bottom:-5px;/*20px;*/
-    background:var(--yellow-color);
-    /*background:var(--white-color);*/
+    background:var(--yellow-col);
     transition: all 0.3s linear;
 }
 header nav a:hover:after{width:100%}
@@ -81,11 +98,13 @@ header nav a:hover:after{width:100%}
 
 header .l-cont{text-align:end;line-height:25px;padding-right:2px;}
 
-header .phone a,header .phone a:visited{font-weight:300;font-size:16px;text-decoration:none;color:var(--logo-color)}
-header .phone a:hover{color:var(--yellow-color);font-size:17px}
+header .phone a,header .phone a:visited{font-weight:300;
+    font-size:16px;text-decoration:none;color:var(--logo-col)}
+header .phone a:hover{color:var(--yellow-col);font-size:17px}
 
-header .mail a,header .mail a:visited{font-weight:300;font-size:14px;text-decoration:none;color:var(--logo-color)}
-header .mail a:hover{color:var(--yellow-color)}
+header .mail a,header .mail a:visited{font-weight:300;
+    font-size:14px;text-decoration:none;color:var(--logo-col)}
+header .mail a:hover{color:var(--yellow-col)}
 
 
 
