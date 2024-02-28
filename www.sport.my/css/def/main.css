@@ -1,0 +1,149 @@
+:root{
+
+    --aqua-col:#0ca1b1;
+    --orange-col:#ed692a;
+    --dark-col:#202439;
+    --white-col:#fcfcfc;
+
+    --dark-rgba:rgba(13,13,13,.9);
+}
+*{
+    outline:none;
+    transition:.4s;
+    font-family:"Montserrat",Helvetica,Arial,sans-serif;
+    box-sizing:border-box
+}
+html,body{
+    height: 100%;
+    text-align: justify;
+    cursor:default;
+    /*background-color:#fcfcfc;*/
+    position: relative
+}
+
+
+h1, h2, h3, h4{
+    text-align:center;
+    margin:15px auto;
+    font-weight:normal;
+}
+h1{font-size:180%}
+h2{font-size:130%}
+h3{font-size:120%}
+/*h1,h2,h3,h4{color:#b9cfff}*/
+p,ul{margin:5px;}
+p{line-height: 1.5;}
+ul li{list-style-type: none}
+
+/*A:link, .link {
+    color:#fcfcfc;
+    text-decoration:underline
+}
+
+A:active {
+    color:#4CA5C6
+}
+
+A:visited {
+    color:#fcfcfc
+}
+
+A:hover, .link:hover {
+    color:#4CA5C6;
+    text-decoration: blink
+}*/
+.maxw{
+    margin: 0 auto;
+    /*min-width: 150px;*/
+    /*max-width: 1240px;*/
+
+    position: relative;
+    /*width: 1180px;*/
+    max-width: 1280px;
+    /*border-left: burlywood 1px dotted;
+    border-right: burlywood 1px dotted;*/
+    overflow: hidden;
+
+}
+
+
+footer{
+    /*border: aquamarine 1px solid;*/
+    /*min-height: 150px;*/
+
+    position: sticky;
+    bottom: 0;
+    z-index: -1;
+    min-height: 350px;
+    background-color:var(--orange-col);
+    color: var(--white-col);
+    text-shadow: 2px 2px black;
+    padding: 5px 0;
+    text-align: center;
+
+}
+
+#shadow{
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index:999;
+    background:rgba(0,0,0,0.8);
+}
+
+/*******************************************************************************/
+
+/*Анимация*/
+.a-show{
+  opacity:.01;
+  animation: a-show 2.5s forwards;
+}
+@keyframes a-show{
+    0%{opacity:.01}
+    100%{opacity:1}
+}
+
+
+.a-to-right{
+    transform: translateX(-150%);
+    animation: a-to-right 1500ms forwards;
+}
+@keyframes a-to-right{
+    0% {transform: translateX(-150%);}
+    100% {transform: translateY(0);}
+}
+
+.a-to-up{
+  transform: translateY(150%);
+  animation: a-to-up 1s forwards;
+}
+@keyframes a-to-up{
+    0% {transform: translateY(150%);}
+    100% {transform: translateY(0);}
+  }
+
+.a-expansion{
+    position: absolute; overflow: hidden; top: 15px; left: 0; width: 0;
+    text-align: right; white-space: nowrap;
+    animation:expansion 2s linear forwards;  
+}
+@keyframes expansion{  /*эффект для абстактных лево-право*/
+    0% {left: 40px; width: 0;}
+    100% {left: 0; width: 75px;}
+}
+
+.a-img-full{
+    max-width:1px;
+    animation:a-img-full 2s linear forwards;
+}
+@keyframes a-img-full{
+    0% {max-width:1px;}
+    100% {max-width:100%;}
+}
+
+/*Цвета*/
+
+/*Цвета*/
