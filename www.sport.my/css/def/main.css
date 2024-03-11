@@ -5,7 +5,7 @@
     --dark-col:#202439;
     --white-col:#fcfcfc;
 
-    --dark-rgba:rgba(13,13,13,.9);
+    --dark-rgba:rgba(35,35,35,.97);
 }
 *{
     outline:none;
@@ -91,7 +91,7 @@ footer{
     width:100%;
     height:100%;
     z-index:999;
-    background:rgba(0,0,0,0.8);
+    background:rgba(0,0,0,.8);
 }
 
 /*******************************************************************************/

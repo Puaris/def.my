@@ -37,6 +37,7 @@ header .logo{
     border-left: var(--white-col) 1px solid;
     border-right: var(--white-col) 1px solid;
 }
+header .logo img {margin-right: 10px; vertical-align: middle;}
 
 /* ***************комерческое предложение******************* */
 header .kp{
@@ -150,45 +151,188 @@ header .lng{
     justify-self:right;
 }
 /* ***************конец кнопки мультиязычности******************* */
-/*Меню*/
-/* header nav{
-    display:flex;
-    justify-content:space-around;
-    align-content:center;
-    text-transform:uppercase;
+
+/* ***************Меню бургера******************* */
+
+header .menu{
+    display:none;
+    position:fixed;
+    z-index:901;
+    top:25px;
+    right:15px;
+    width:40px;
+    height:36px;
+    background-color:rgba(33, 33, 33,.9);
+    padding: 4px;
+    border-radius:4px}
+#menu{
+    cursor: pointer;
+    background-color:transparent;
+    border: none;
+    width: 100%;
+    position: relative;
+    height: 100%
+}
+#menu span{
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+  }
+  #menu span {
+      position: absolute;
+      right: 0;
+      width: 100%;
+      height: 4px;
+      background-color:var(--white-col);
+      border-radius:4px}
+      
+      #menu span:nth-of-type(1){
+        top:0;
+      }
+      #menu span:nth-of-type(2){
+        top:12px;width:83%;
+      }
+      #menu span:nth-of-type(3){
+        bottom:0
+      }
+
+      /* когда нажато */
+      #menu.active span:nth-of-type(1) {
+        transform:translateY(12px) rotate(-315deg);
+      }
+      #menu.active span:nth-of-type(2) {
+        opacity:0;
+      }
+      #menu.active span:nth-of-type(3) {
+        transform:translateY(-12px) rotate(315deg);
+      }
+
+/* ***************Конец Меню бургера******************* */
+/****************************************/
+/**************тело бургера**************/
+header .burger{
+    position:fixed;
+    left:0;
+    top:-100%;
+    height:100%;
+    width:100%;
+    z-index:900;
+    background-color:rgba(40,40,40,.57);
+    overflow-y: auto;
+    backdrop-filter:blur(5px);
+}
+header .burger.active{
+    top:0;
+}
+header .b-head{
+    height:60px;
+    width:100%;
+}
+header .b-down{
+    
+    height: 70px;
+    width: 100%;
+    background-color:var(--dark-rgba);
+    border-top:var(--white-col) 1px solid;
 }
 
-header nav span{
-    position:relative;
+header .b-h-line{
+    background-color:var(--dark-rgba);
+    max-width:350px;
+    width:100%;
+    height:40px;
+    border:var(--white-col) 2px solid;
+    margin:13px auto;
+    text-align:center;
+    line-height:40px;
+    transition: all .5s;
+    overflow: hidden;
+    border-radius:7px;
+    position: relative;
+}
+
+header .b-h-line:hover,header .b-h-line:active{
+    border:var(--orange-col) 1px solid;
 
 }
 
-header nav a{
-    color:var(--yellow-col);
-    text-decoration:none;
-    display:block;
+header .b-h-line a{
+    display: block;
+    color: var(--white-col);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing:1px;
 }
-header nav a:after{
-    content:"";
-    width:0;
-    height:2px;
-    position:absolute;
-    left: 0;
-    bottom:-5px;
-    background:var(--yellow-col);
-    transition: all 0.3s linear;
+header .b-h-line a:hover{
+    display: block;
+    color:var(--orange-col);
+    /*text-decoration: none;*/
+    font-weight:500;
+    letter-spacing:2px;
+
 }
-header nav a:hover:after{width:100%}
-*/
 
+header .b-down .msgBtn{
+    padding: 13px 0;
+    }
+    header .b-phone{
+        padding:13px 0 0;
+        text-align: center;
+    }
+    header .b-phone a{color:var(--white-col)
+    }
+    header .b-phone a:hover{color:var(--orange-col)}
+/****************************************/
+/****************************************/
+@media (min-width: 1060px) and (max-width: 1260px){
+    header .maxw{
+        grid-column-gap:0;
+    }
+}
+@media (max-width: 1060px){
+    header .arrow{display:none}
+    header .kp p{display:none}
+}
+@media (min-width:1001px) and (max-width: 1059px){
+    header .maxw{
+        grid-template-columns:0.7fr 195px 0.75fr 0.6fr 55px;
+        grid-column-gap:0;
+    }
+}
+@media (max-width: 1000px){
+    header .msg{grid-template-columns:1fr;}
+    header .msg p{display:none}
+}
+@media (min-width:976px) and (max-width: 1000px){
+    header .maxw{
+        grid-template-columns:0.7fr 195px 180px 0.6fr 55px;
+        grid-column-gap:3%;
+    }
+}
+@media (max-width:975px){
+    header .kp{display:none}
+}
+@media (min-width:801px) and (max-width:975px){
+    header .maxw{
+        grid-template-columns:0.67fr 180px 0.5fr 65px;
+        grid-column-gap:3%;
+    }
+}
+/*мобильный вид*/
 
-/*Меню End*/
-
-
-
-
-
-
-
-
-/*a:active {}*/
+@media (max-width:950px){
+    header .lng{display:none}
+    header .menu{display:block}
+    header .msgBtn{grid-template-columns:minmax(70px,33%) minmax(70px,33%)}
+}
+@media (max-width:800px){
+    header .phone{display:none}
+    header .msg{display: none}
+    header .msgBtn{grid-template-columns:minmax(70px,30%) minmax(70px,30%)}
+}
+@media (max-width:800px){
+    header .maxw{
+        grid-template-columns:1fr;
+    }
+}

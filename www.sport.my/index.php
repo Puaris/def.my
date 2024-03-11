@@ -97,14 +97,14 @@
 
         </script> -->
         
-        <!-- <div class="menu">
+        <div class="menu">
             <button id="menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-        </div> -->
-        <!-- <nav id="menu_body" class="burger"><--  скрыто hide
+        </div>
+        <nav id="menu_body" class="burger"><!--  скрыто hide-->
             <div class="b-head">
 
             </div>
@@ -115,9 +115,8 @@
                 <div class="b-h-line"><a href="/">Главная</a></div>
                 <div class="b-h-line"><a href="/">Главная ghjjl</a></div>
                 <div class="b-h-line"><a href="/">Рассчитать стоимость</a></div>
-                <--<div class="b-h-line">Главная d</div>
                 <div class="b-h-line">Главная d</div>
-
+                <div class="b-h-line">Главная d</div>
 
             </div>
             <div class="b-down">
@@ -130,8 +129,8 @@
                     <p>Пн-Вс: 8:30 - 22:00</p>
                 </div>
             </div>
-        </nav> -->
-        <!-- <script type="text/javascript">
+        </nav>
+        <script type="text/javascript">
 
             const menuBody=()=>{
                 document.getElementById("menu").classList.toggle('active');
@@ -147,7 +146,7 @@
                 }
             },true);
 
-        </script> -->
+        </script>
     </div>
 </header>
 

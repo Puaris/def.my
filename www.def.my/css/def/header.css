@@ -264,7 +264,7 @@ header .b-phone a:hover{color:#E5BB3B}
         grid-column-gap:0;
     }
 }
-@media (max-width: 1059px){
+@media (max-width: 1060px){
     header .arrow{display:none}
     header .kp p{display:none}
 }
